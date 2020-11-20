@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 14:01:47 by eriling           #+#    #+#             */
-/*   Updated: 2020/11/20 10:22:20 by eriling          ###   ########.fr       */
+/*   Updated: 2020/11/20 20:16:21 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		c_word(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	while (is_blank(s[i], c))
+	while (s[i] && is_blank(s[i], c))
 		i++;
 	while (s[i])
 	{
@@ -38,18 +38,20 @@ int		c_word(char const *s, char c)
 	return (count);
 }
 
-char	*add_string(char const *s, char c)
+char	*add_string(char const *s, char c, int word)
 {
 	char	*str;
 	int		i;
 
 	i = 0;
-	while (!is_blank(s[i], c))
+	while (s[i] && !is_blank(s[i], c))
 		i++;
 	if (!(str = malloc(sizeof(*str) * (i + 1))))
+	{
 		return (NULL);
+	}
 	i = 0;
-	while (!is_blank(s[i], c))
+	while (s[i] && !is_blank(s[i], c))
 	{
 		str[i] = s[i];
 		i++;
@@ -66,17 +68,21 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s || (!(array = malloc(sizeof(*array) * (c_word(s, c) + 1)))))
+	if (!s || !(array = malloc(sizeof(*array) * (c_word(s, c) + 1))))
 		return (NULL);
-	while (is_blank(s[i], c))
+
+	while (s[i] && is_blank(s[i], c))
 		i++;
 	while (s[i])
 	{
 		if (s[i] && (!is_blank(s[i], c) && ((is_blank(s[i - 1], c) || i == 0))))
-			array[j++] = add_string(&s[i], c);
+		{
+			array[j] = add_string(&s[i], c, j);
+			j++;
+		}
 		i++;
 	}
-	array[j] = 0;
+	array[j] = NULL;
 	return (array);
 }
 
@@ -89,11 +95,12 @@ int main(int ac, char **av)
 	if (ac == 3)
 	{
 		range = ft_split(av[1], *av[2]);
-		while (i < c_word(av[1], *av[2]))
+		while (range[i] != NULL)
 		{
 			printf("%s\n", range[i]);
 			i++;
 		}
 	}
-	return (0);
+
+
 }
