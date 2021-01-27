@@ -6,7 +6,7 @@
 #    By: eriling <eriling@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/28 14:26:24 by eriling           #+#    #+#              #
-#    Updated: 2021/01/27 15:40:55 by eriling          ###   ########.fr        #
+#    Updated: 2021/01/27 15:42:18 by eriling          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ SRC := \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-	check_file_extension \
+	check_file_extension.c \
 	get_next_line.c \
 
 SRCBNS :=  \
