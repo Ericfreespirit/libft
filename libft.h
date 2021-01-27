@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 10:46:17 by eriling           #+#    #+#             */
-/*   Updated: 2021/01/27 09:39:30 by eriling          ###   ########.fr       */
+/*   Updated: 2021/01/27 11:50:21 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}				t_list;
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
-void (*del)(void *));
+}						t_list;
+
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *)
+, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 t_list			*ft_lstlast(t_list *lst);
@@ -67,6 +68,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
-
+int				parse_file(char *s1, char *s2);
 
 #endif
