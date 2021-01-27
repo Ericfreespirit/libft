@@ -6,11 +6,11 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 14:09:28 by eriling           #+#    #+#             */
-/*   Updated: 2020/11/27 11:01:41 by eriling          ###   ########.fr       */
+/*   Updated: 2021/01/27 15:36:44 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 void		ft_free_str(char **s)
 {
@@ -60,16 +60,16 @@ static int	filter(char **str, int fd, char **line, int r)
 	return (save_line(&str[fd], line));
 }
 
-int			get_next_line(const int fd, char **line)
+int			get_next_line(const int fd, char **line, int buffer_size)
 {
 	int			r;
 	char		*tmp;
 	static char	*str[256];
-	char		buff[BUFFER_SIZE + 1];
+	char		buff[buffer_size + 1];
 
-	if (fd < 0 || !line || fd > 256 || BUFFER_SIZE <= 0)
+	if (fd < 0 || !line || fd > 256 || buffer_size <= 0)
 		return (-1);
-	while ((r = read(fd, buff, BUFFER_SIZE)) > 0)
+	while ((r = read(fd, buff, buffer_size)) > 0)
 	{
 		buff[r] = '\0';
 		if (!str[fd])
