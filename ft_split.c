@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 14:01:47 by eriling           #+#    #+#             */
-/*   Updated: 2020/11/20 20:16:21 by eriling          ###   ########.fr       */
+/*   Updated: 2021/01/27 09:35:16 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		c_word(char const *s, char c)
 	return (count);
 }
 
-char	*add_string(char const *s, char c, int word)
+char	*add_string(char const *s, char c)
 {
 	char	*str;
 	int		i;
@@ -77,7 +77,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] && (!is_blank(s[i], c) && ((is_blank(s[i - 1], c) || i == 0))))
 		{
-			array[j] = add_string(&s[i], c, j);
+			array[j] = add_string(&s[i], c);
 			j++;
 		}
 		i++;

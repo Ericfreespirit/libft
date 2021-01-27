@@ -6,7 +6,7 @@
 #    By: eriling <eriling@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/28 14:26:24 by eriling           #+#    #+#              #
-#    Updated: 2020/11/18 14:47:20 by eriling          ###   ########.fr        #
+#    Updated: 2021/01/27 09:39:57 by eriling          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC := \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_strncmp.c \
+	ft_strcmp.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
 	ft_strnstr.c \
