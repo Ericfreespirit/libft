@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 10:46:17 by eriling           #+#    #+#             */
-/*   Updated: 2021/01/27 15:37:38 by eriling          ###   ########.fr       */
+/*   Updated: 2021/01/29 10:04:12 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char			*ft_strdup(const char *s);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlen(const char *s);
-int				ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_strncmp(char *s1, char *s2, size_t n);
 int				ft_strcmp(char *s1, char *s2);
 char			*ft_strnstr(const char *s1, const char *s2, size_t len);
 char			*ft_strrchr(const char *s, int c);
