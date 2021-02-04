@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 10:46:17 by eriling           #+#    #+#             */
-/*   Updated: 2021/01/29 10:04:12 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/03 11:12:48 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -32,7 +33,8 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstadd_front(t_list **alst, t_list *new);
 t_list			*ft_lstnew(void *content);
-int				ft_atoi(const char *str);
+int				ft_atoi(char *str);
+int				ft_atoi_2(char **str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
 int				ft_isalnum(int c);

@@ -6,7 +6,7 @@
 #    By: eriling <eriling@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/28 14:26:24 by eriling           #+#    #+#              #
-#    Updated: 2021/01/27 15:42:18 by eriling          ###   ########.fr        #
+#    Updated: 2021/02/03 11:25:43 by eriling          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ HEAD := -Iincludes/
 CFLAGS = -Wall -Wextra -Werror
 SRC := \
 	ft_atoi.c \
+	ft_atoi_2.c \
 	ft_bzero.c \
 	ft_calloc.c \
 	ft_memset.c \

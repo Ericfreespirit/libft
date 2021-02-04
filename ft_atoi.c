@@ -5,38 +5,40 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/12 16:11:47 by eriling           #+#    #+#             */
-/*   Updated: 2020/10/28 17:30:00 by eriling          ###   ########.fr       */
+/*   Created: 2021/02/03 11:11:04 by eriling           #+#    #+#             */
+/*   Updated: 2021/02/03 11:11:43 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
-	long	i;
 	long	sign;
 	long	nb;
-
-	i = 0;
+	
 	sign = 1;
 	nb = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		(str)++;
 	}
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	if (*str == '+' || *str == '-')
 	{
-		nb = (nb * 10) + (str[i] - '0');
+		if (*str == '-')
+			sign *= -1;
+		(str)++;
+	}
+
+	while (*str && *str >= '0' && *str <= '9')
+	{
+		nb = (nb * 10) + (*str - '0');
 		if (nb < 0 && sign == -1)
 			return (0);
 		else if (nb < 0 && sign == 1)
 			return (-1);
-		i++;
+		(*str)++;
 	}
 	return (nb * sign);
 }
