@@ -6,7 +6,11 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 10:46:17 by eriling           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/02/03 11:12:48 by eriling          ###   ########.fr       */
+=======
+/*   Updated: 2021/02/04 14:30:54 by eriling          ###   ########.fr       */
+>>>>>>> e8bd0b05168da17dd39d418e238982ac8cf37b62
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +74,14 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+<<<<<<< HEAD
 int				check_file_extension(char *s1, char *s2);
 int				get_next_line(const int fd, char **line,int buffer_size);
+=======
+int				parse_file(char *s1, char *s2);
+int				get_next_line(const int fd, char **line);
+double			ft_atof(char *str);
+>>>>>>> e8bd0b05168da17dd39d418e238982ac8cf37b62
 
 
 #endif

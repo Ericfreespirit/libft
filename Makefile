@@ -6,7 +6,11 @@
 #    By: eriling <eriling@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/28 14:26:24 by eriling           #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2021/02/03 11:25:43 by eriling          ###   ########.fr        #
+=======
+#    Updated: 2021/02/04 14:31:34 by eriling          ###   ########.fr        #
+>>>>>>> e8bd0b05168da17dd39d418e238982ac8cf37b62
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +55,13 @@ SRC := \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+<<<<<<< HEAD
 	check_file_extension.c \
 	get_next_line.c \
+=======
+	get_next_line.c \
+	ft_atof.c \
+>>>>>>> e8bd0b05168da17dd39d418e238982ac8cf37b62
 
 SRCBNS :=  \
 ft_lstmap_bonus.c \
