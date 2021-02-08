@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:16:51 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/08 09:35:56 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/08 13:18:00 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ double	solve_ft_atof(char *str, double inter_part, double fract_part, int div)
 			else
 				is_fract = 1;
 		}
+		else 
+			break;
 		str++;
 	}
 	return (inter_part + fract_part / div);
