@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 10:46:17 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/04 14:45:32 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/08 09:45:03 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void			ft_lstadd_front(t_list **alst, t_list *new);
 t_list			*ft_lstnew(void *content);
 int				ft_atoi(char *str);
 int				ft_atoi_2(char **str);
+double	ft_atof(char *str);
+double	ft_atof_2(char **str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
 int				ft_isalnum(int c);
