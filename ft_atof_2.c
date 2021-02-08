@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:16:51 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/08 22:29:31 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:32:53 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,4 @@ double	ft_atof_2(char **str)
 		(*str)++;
 	}	
 	return (sign * solve_ft_atof_2(str, inter_part, fract_part, div));
-}
-
-int main()
-{
-	char **str;
-
-	*str = malloc(100);
-	*str = "0.3323";
-	printf("%f",ft_atof_2(str));
-	return (0);
 }

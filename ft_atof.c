@@ -6,35 +6,38 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:16:51 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/08 13:18:00 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:36:43 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void is_fract(double *fract_part, int *div, char *str)
+{
+	*fract_part = *fract_part * 10 + (*str - '0');
+	*div *= 10;
+}
+
 double	solve_ft_atof(char *str, double inter_part, double fract_part, int div)
 {
-	int	is_fract;
+	int	fract;
 
-	is_fract = 0;
+	fract = 0;
 	while (*str)
 	{
 		if (*str >= '0' && *str <= '9')
 		{
-			if (is_fract)
-			{
-				fract_part = fract_part * 10 + (*str - '0');
-				div *= 10;
-			}
+			if (fract)
+				is_fract(&fract_part, &div, str);
 			else
 				inter_part = inter_part * 10 + (*str - '0');
 		}
 		else if (*str == '.')
 		{
-			if (is_fract)
+			if (fract)
 				return (inter_part + fract_part / div);
 			else
-				is_fract = 1;
+				fract = 1;
 		}
 		else 
 			break;
