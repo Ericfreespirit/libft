@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 15:39:50 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/16 10:52:38 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/16 11:06:45 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	check_file_extension(char *s1, char *s2)
 			break ;
 		i--;
 	}
-	printf("[%d] %c\n",i, s2[i]);
 	while (*s1 && (*s1 == s2[i]))
 	{
 		s1++;
