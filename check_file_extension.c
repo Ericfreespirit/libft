@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 15:39:50 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/16 11:06:45 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/16 11:14:24 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	check_file_extension(char *s1, char *s2)
 		s1++;
 		i++;
 		if (*s1 == '\0' && s2[i] == '\0')
-			return (1);
+			return (0);
 	}
-	return (0);
+	return (1);
 }
