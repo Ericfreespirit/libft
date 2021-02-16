@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 15:39:50 by eriling           #+#    #+#             */
-/*   Updated: 2021/01/27 15:40:16 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/16 10:52:38 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 int	check_file_extension(char *s1, char *s2)
 {
-	while (*s2)
+	int i;
+
+	i = 0;
+	while (s2[i])
+		i++;
+	while (i > 0)
 	{
-		if (*s2 == '.')
+		if (s2[i] == '.')
 			break ;
-		s2++;
+		i--;
 	}
-	while (*s1 && (*s1 == *s2))
+	printf("[%d] %c\n",i, s2[i]);
+	while (*s1 && (*s1 == s2[i]))
 	{
 		s1++;
-		s2++;
-		if (*s1 == '\0' && *s2 == '\0')
+		i++;
+		if (*s1 == '\0' && s2[i] == '\0')
 			return (1);
 	}
 	return (0);
