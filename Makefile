@@ -6,7 +6,7 @@
 #    By: eriling <eriling@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/04 14:43:02 by eriling           #+#    #+#              #
-#    Updated: 2021/02/08 09:34:10 by eriling          ###   ########.fr        #
+#    Updated: 2021/02/16 12:16:59 by eriling          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,6 @@ SRC := \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	get_next_line.c \
-	check_file_extension.c \
 	ft_atof.c \
 	ft_atof_2.c \
 
