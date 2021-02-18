@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 14:09:28 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/18 11:27:44 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 12:02:44 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,24 @@ static int	filter(char **str, int fd, char **line, int r)
 	return (save_line(&str[fd], line));
 }
 
+void 	ft_read_else(char **tmp, char **str, char **buff, int fd)
+{
+	*tmp = ft_strjoin(str[fd], *buff);
+	free(str[fd]);
+	str[fd] = *tmp;
+}
+
 int	get_next_line(const int fd, char **line, int buffer_size)
 {
 	int			r;
 	char		*tmp;
 	static char	*str[256];
-	char		buff[buffer_size + 1];
+	char		*buff;
 
 	if (fd < 0 || !line || fd > 256 || buffer_size <= 0)
+		return (-1);
+	buff = malloc(buffer_size + 1);
+	if (!buff)
 		return (-1);
 	r = read(fd, buff, buffer_size);
 	while (r > 0)
@@ -77,13 +87,10 @@ int	get_next_line(const int fd, char **line, int buffer_size)
 		if (!str[fd])
 			str[fd] = ft_strdup(buff);
 		else
-		{
-			tmp = ft_strjoin(str[fd], buff);
-			free(str[fd]);
-			str[fd] = tmp;
-		}
+			ft_read_else(&tmp, &(*str), &buff, fd);
 		if (ft_strchr(str[fd], '\n'))
 			break ;
 	}
+	free(buff);
 	return (filter(str, fd, line, r));
 }
