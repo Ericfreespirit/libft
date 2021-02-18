@@ -6,13 +6,13 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 11:54:14 by eriling           #+#    #+#             */
-/*   Updated: 2020/10/28 17:44:01 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:31:19 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_set(char c, char const *set)
+int	is_set(char c, char const *set)
 {
 	int		i;
 

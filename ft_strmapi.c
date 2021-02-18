@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 17:53:13 by eriling           #+#    #+#             */
-/*   Updated: 2020/10/28 17:44:18 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:32:39 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	else if (!(dst = ft_strdup(s)))
+	dst = ft_strdup(s);
+	if (dst == NULL)
 		return (NULL);
 	while (dst[i])
 	{

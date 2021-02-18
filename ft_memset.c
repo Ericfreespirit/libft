@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 10:48:13 by eriling           #+#    #+#             */
-/*   Updated: 2020/10/28 17:45:21 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:43:11 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		p[i] = (unsigned char)c;
 		i++;
 	}
-	return ((void*)p);
+	return ((void *)p);
 }

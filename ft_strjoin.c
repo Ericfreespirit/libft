@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 11:03:24 by eriling           #+#    #+#             */
-/*   Updated: 2020/10/28 17:44:38 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:33:48 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(dst = malloc(sizeof(*dst) * (len + 1))))
+	dst = malloc(sizeof(*dst) * (len + 1));
+	if (!dst)
 		return (NULL);
 	while (s1[i])
 		dst[j++] = s1[i++];

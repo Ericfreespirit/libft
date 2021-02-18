@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 16:52:58 by eriling           #+#    #+#             */
-/*   Updated: 2020/11/04 12:04:36 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:44:24 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *curr;
-	t_list *new;
-	t_list *tmp;
+	t_list	*curr;
+	t_list	*new;
+	t_list	*tmp;
 
 	curr = NULL;
 	new = NULL;

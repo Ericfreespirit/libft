@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 10:46:17 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/16 12:12:43 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 10:28:22 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void			ft_lstadd_front(t_list **alst, t_list *new);
 t_list			*ft_lstnew(void *content);
 int				ft_atoi(char *str);
 int				ft_atoi_2(char **str);
-double	ft_atof(char *str);
-double	ft_atof_2(char **str);
+double			ft_atof(char *str);
+double			ft_atof_2(char **str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
 int				ft_isalnum(int c);
@@ -72,7 +72,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
-int				get_next_line(const int fd, char **line,int buffer_size);
-
+int				get_next_line(const int fd, char **line, int buffer_size);
 
 #endif

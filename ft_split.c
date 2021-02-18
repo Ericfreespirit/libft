@@ -6,21 +6,21 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 14:01:47 by eriling           #+#    #+#             */
-/*   Updated: 2021/01/27 09:35:16 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:38:28 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int		is_blank(char letter, char c)
+int	is_blank(char letter, char c)
 {
 	if (letter == c)
 		return (1);
 	return (0);
 }
 
-int		c_word(char const *s, char c)
+int	c_word(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -46,10 +46,9 @@ char	*add_string(char const *s, char c)
 	i = 0;
 	while (s[i] && !is_blank(s[i], c))
 		i++;
-	if (!(str = malloc(sizeof(*str) * (i + 1))))
-	{
+	str = malloc(sizeof(*str) * (i + 1));
+	if (!str)
 		return (NULL);
-	}
 	i = 0;
 	while (s[i] && !is_blank(s[i], c))
 	{
@@ -68,9 +67,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s || !(array = malloc(sizeof(*array) * (c_word(s, c) + 1))))
+	array = malloc(sizeof(*array) * (c_word(s, c) + 1));
+	if (!s || !array)
 		return (NULL);
-
 	while (s[i] && is_blank(s[i], c))
 		i++;
 	while (s[i])
@@ -84,23 +83,4 @@ char	**ft_split(char const *s, char c)
 	}
 	array[j] = NULL;
 	return (array);
-}
-
-int main(int ac, char **av)
-{
-	char **range;
-	int	i;
-
-	i = 0;
-	if (ac == 3)
-	{
-		range = ft_split(av[1], *av[2]);
-		while (range[i] != NULL)
-		{
-			printf("%s\n", range[i]);
-			i++;
-		}
-	}
-
-
 }

@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:06:42 by eriling           #+#    #+#             */
-/*   Updated: 2020/11/04 12:03:47 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:45:56 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = NULL;
 	if (!new)

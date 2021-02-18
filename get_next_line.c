@@ -6,13 +6,13 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 14:09:28 by eriling           #+#    #+#             */
-/*   Updated: 2021/01/27 15:36:44 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 11:27:44 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_free_str(char **s)
+void	ft_free_str(char **s)
 {
 	if (s != NULL && *s != NULL)
 	{
@@ -60,7 +60,7 @@ static int	filter(char **str, int fd, char **line, int r)
 	return (save_line(&str[fd], line));
 }
 
-int			get_next_line(const int fd, char **line, int buffer_size)
+int	get_next_line(const int fd, char **line, int buffer_size)
 {
 	int			r;
 	char		*tmp;
@@ -69,8 +69,10 @@ int			get_next_line(const int fd, char **line, int buffer_size)
 
 	if (fd < 0 || !line || fd > 256 || buffer_size <= 0)
 		return (-1);
-	while ((r = read(fd, buff, buffer_size)) > 0)
+	r = read(fd, buff, buffer_size);
+	while (r > 0)
 	{
+		r = read(fd, buff, buffer_size);
 		buff[r] = '\0';
 		if (!str[fd])
 			str[fd] = ft_strdup(buff);
