@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 16:02:03 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/18 12:17:08 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 14:10:59 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,13 @@ void	init_ft_itoa(long *val, int *i, int *sign, int n)
 	}
 }
 
-void	*len_ft_itoa(long val, int i)
+void	len_ft_itoa(long val, int *i)
 {
+	val /= 10;
 	while (val > 0)
 	{
 		val /= 10;
-		i++;
+		(*i)++;
 	}
 }
 
@@ -45,7 +46,7 @@ char	*ft_itoa(int n)
 	char	*s;
 
 	init_ft_itoa(&val, &i, &sign, n);
-	len_ft_itoa(val, i);
+	len_ft_itoa(val, &i);
 	s = malloc(sizeof(*s) * i + 1);
 	if (!s)
 		return (NULL);
