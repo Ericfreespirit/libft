@@ -6,13 +6,13 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:16:51 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/08 22:36:43 by eriling          ###   ########.fr       */
+/*   Updated: 2021/02/18 09:33:43 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void is_fract(double *fract_part, int *div, char *str)
+void 	is_fract(double *fract_part, int *div, char *str)
 {
 	*fract_part = *fract_part * 10 + (*str - '0');
 	*div *= 10;
@@ -39,8 +39,8 @@ double	solve_ft_atof(char *str, double inter_part, double fract_part, int div)
 			else
 				fract = 1;
 		}
-		else 
-			break;
+		else
+			break ;
 		str++;
 	}
 	return (inter_part + fract_part / div);

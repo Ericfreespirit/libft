@@ -20,8 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s || !(ss = malloc(sizeof(*ss) * (len + 1))))
 		return (NULL);
-		while (ft_strlen(s) > start && i < len)
-			ss[i++] = s[start++];
+	while (ft_strlen(s) > start && i < len)
+		ss[i++] = s[start++];
 	ss[i] = '\0';
 	return (ss);
 }
