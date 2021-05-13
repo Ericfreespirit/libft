@@ -6,7 +6,7 @@
 /*   By: eriling <eriling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 11:11:04 by eriling           #+#    #+#             */
-/*   Updated: 2021/02/18 09:35:52 by eriling          ###   ########.fr       */
+/*   Updated: 2021/05/13 16:38:23 by eriling          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(char *str)
 			return (0);
 		else if (nb < 0 && sign == 1)
 			return (-1);
-		(*str)++;
+		str++;
 	}
 	return (nb * sign);
 }
